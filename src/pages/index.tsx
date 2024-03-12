@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Claim from "@/components/Claim";
+import Presale from "@/components/Presale";
 
 import WorksImage from "@/assets/works.jpg";
 
@@ -31,6 +33,10 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+
+			<Claim />
+
+			<Presale />
 		</main>
 	);
 }

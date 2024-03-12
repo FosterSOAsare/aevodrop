@@ -5,7 +5,7 @@ import LogoImage from "@/assets/logo.png";
 
 const Header = () => {
 	return (
-		<header className="sticky top-0 left-0 bg-bg z-[3] w-full h- flex items-center h-20 justify-center py-2">
+		<header className="sticky top-0 left-0 bg-bg z-[3] w-full  py-2">
 			<div className="w-full max-w-6xl mx-auto h-full flex items-center justify-between">
 				<div className="w-[120px] h-10 relative">
 					<Image alt="Logo" src={LogoImage} fill />
