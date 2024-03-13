@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Claim from "@/components/Claim";
 import Presale from "@/components/Presale";
+import Tokenomics from "@/components/Tokenomics";
+import Partners from "@/components/Partners";
 
 import WorksImage from "@/assets/works.jpg";
 
@@ -13,7 +15,7 @@ export default function Home() {
 			<Header />
 			<Hero />
 
-			<section className="w-full h-auto  py-24">
+			<section className="w-full h-auto py-24">
 				<div className="w-full max-w-4xl mx-auto gap-6 flex items-center justify-between">
 					<div className="w-1/2">
 						<h3 className="text-2xl mb-6">How Does AEVO Work?</h3>
@@ -37,6 +39,9 @@ export default function Home() {
 			<Claim />
 
 			<Presale />
+
+			<Tokenomics />
+			<Partners />
 		</main>
 	);
 }
