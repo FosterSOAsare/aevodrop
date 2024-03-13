@@ -3,6 +3,8 @@ import Image from "next/image";
 
 import LogoImage from "@/assets/logo.png";
 
+import { FaGem, FaParachuteBox } from "react-icons/fa";
+
 const Hero = () => {
 	const [timeLeft, setTime] = useState();
 	useEffect(() => {
@@ -34,12 +36,16 @@ const Hero = () => {
 				</p>
 
 				<div className="flex items-center justify-between gap-8 mt-10">
-					<button className="flex bg-[#F9DA00] rounded-full py-4 px-8 items-center justify-between gap-4">
-						<span className="w-6 bg-[green] h-6 block"></span>
+					<button className="flex bg-[#F9DA00] rounded-full relative hover:-top-2 transition-all duration-300 py-4 px-8 items-center justify-between gap-2">
+						<span className="w-6 h-6 flex items-center justify-center">
+							<FaGem className="text-white text-xl" />
+						</span>
 						<p className="text-black text-sm font-bold">Pre-Sale</p>
 					</button>
-					<button className="flex bg-blue rounded-full py-4 px-8 items-center justify-between gap-4">
-						<span className="w-6 bg-[green] h-6 block"></span>
+					<button className="flex bg-blue relative rounded-full hover:-top-2 transition-all duration-300 py-4 px-8 items-center justify-between gap-2">
+						<span className="w-6 h-6 flex items-center justify-center">
+							<FaParachuteBox className="text-white text-xl" />
+						</span>
 						<p className="text-white text-sm font-bold">Airdrop</p>
 					</button>
 				</div>

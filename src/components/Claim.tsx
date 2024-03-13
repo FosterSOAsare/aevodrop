@@ -7,6 +7,7 @@ import ClaimCard from "./ClaimCard";
 export interface IClaim {
 	name: string;
 	list: string[];
+	image: string;
 }
 
 const Claim = () => {

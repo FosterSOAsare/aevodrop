@@ -13,7 +13,8 @@ const config: Config = {
         desc: '#979ea5',
         heading: '#cdcdd9',
         blue: '#5b7fec',
-        "light-blue": 'rgb(13 189 242)'
+        "light-blue": 'rgb(13 189 242)',
+        yellow: '#FDD700'
       }
     },
   },
