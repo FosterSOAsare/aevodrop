@@ -20,7 +20,14 @@ h3 {
 
 .layout-sphere {
 	background-image: url("../assets/layout-sphere.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top;
+	@apply bg-cover bg-no-repeat bg-top;
+}
+
+.hero-bg {
+	background-image: url("../assets/layout-bg-overlay-06.svg");
+	@apply bg-no-repeat bg-top;
+}
+.partners-bg {
+	background-image: url("../assets/layout-bg-overlay-04.png");
+	@apply bg-no-repeat bg-top;
 }

@@ -24,7 +24,7 @@ const Hero = () => {
 		};
 	});
 	return (
-		<section className="py-24 border-b-[0.5px] border-desc border-opacity-50">
+		<section className="mt-24 pb-24 border-b-[0.5px] border-opacity-20 border-desc hero-bg">
 			<div className="w-full max-w-4xl  flex items-center flex-col justify-center mx-auto">
 				<div className="w-[180px] h-16 mb-6 relative">
 					<Image alt="Logo" src={LogoImage} fill />

@@ -5,8 +5,9 @@ import partners from "@/data/partners";
 
 const Partners = () => {
 	return (
-		<section className="w-full py-36 bg-[#191B28]">
-			<div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center">
+		<section className="w-full py-36 bg-[#191B28]  relative">
+			<div className="absolute z-[1] top-0 left-0 partners-bg opacity-5 w-full h-full"></div>
+			<div className="w-full relative z-[2] max-w-5xl mx-auto flex flex-col items-center justify-center">
 				<h3 className="text-3xl font-medium text-white">Partners</h3>
 
 				<div className="w-full mt-16 grid grid-cols-4">
