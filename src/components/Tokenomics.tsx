@@ -6,7 +6,7 @@ import tokenomics from "@/data/tokenomics";
 
 const Tokenomics = () => {
 	return (
-		<section className="py-36 relative bg-[#191B28]">
+		<section className="py-36 relative bg-[#191B28]" id="tokenomics">
 			<div className="absolute top-0 left-0 w-full h-full opacity-[0.08] z-[1] layout-sphere"></div>
 			<div className="w-full max-w-5xl relative mx-auto z-[2] flex flex-col items-center justify-center opacity-[1]">
 				<h3 className="text-3xl font-medium mb-6">AEVO Tokenomics</h3>

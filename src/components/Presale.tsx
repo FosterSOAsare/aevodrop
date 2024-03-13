@@ -3,7 +3,7 @@ import PresaleCard from "./PresaleCard";
 
 const Presale = () => {
 	return (
-		<section className="py-24">
+		<section className="py-24" id="presale">
 			<div className="w-full max-w-4xl mx-auto  flex items-center justify-center flex-col">
 				<h3 className="text-white text-3xl mb-4">Pre-sale is live</h3>
 
@@ -37,7 +37,7 @@ const Presale = () => {
 					<PresaleCard name="Total Supply" desc="1,000,000,000" />
 				</article>
 
-				<article className="w-full mt-8 bg-[#1A1B26] rounded-[5px]">
+				<article className="w-full mt-8 bg-[#1A1B26] rounded-[5px]" id="airdrop">
 					<div className="w-full border-b-[1px] py-10 border-slate-100 border-opacity-25 flex items-center justify-center">
 						<h3 className="text-3xl font-medium">AEVO Airdrop is live</h3>
 					</div>

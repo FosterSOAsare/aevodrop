@@ -5,6 +5,9 @@
 * {
 	font-family: "sfui", sans-serif;
 }
+html {
+	scroll-behavior: smooth;
+}
 p,
 li,
 a {
@@ -30,4 +33,32 @@ h3 {
 .partners-bg {
 	background-image: url("../assets/layout-bg-overlay-04.png");
 	@apply bg-no-repeat bg-top;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply !bg-blue;
+}
+
+@media screen and (min-width: 768px) {
+	::selection {
+		@apply bg-blue !text-white opacity-100;
+	}
+	::-webkit-scrollbar {
+		@apply w-[10px] rounded-full;
+	}
+	.main::-webkit-scrollbar {
+		@apply w-[4px];
+	}
+
+	::-webkit-scrollbar-track {
+		@apply bg-bg !w-[1px] md:w-[10px];
+	}
+
+	::-webkit-scrollbar-thumb {
+		@apply bg-blue rounded-[20px];
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		@apply bg-[red];
+	}
 }
