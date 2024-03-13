@@ -6,14 +6,14 @@ import tokenomics from "@/data/tokenomics";
 
 const Tokenomics = () => {
 	return (
-		<section className="py-36 relative bg-[#191B28]" id="tokenomics">
+		<section className="py-20 md:py-36 relative bg-[#191B28] px-4" id="tokenomics">
 			<div className="absolute top-0 left-0 w-full h-full opacity-[0.08] z-[1] layout-sphere"></div>
 			<div className="w-full max-w-5xl relative mx-auto z-[2] flex flex-col items-center justify-center opacity-[1]">
 				<h3 className="text-3xl font-medium mb-6">AEVO Tokenomics</h3>
-				<p className="text-center w-[70%] text-lg">A total of 1,000,000,000 AEVO tokens that will be distributed. Here's a breakdown of the AEVO token:</p>
-				<div className="flex w-full justify-center gap-4 mt-8 items-center">
+				<p className="text-center w-full md:w-[70%] text-lg">A total of 1,000,000,000 AEVO tokens that will be distributed. Here's a breakdown of the AEVO token:</p>
+				<div className="flex flex-col md:flex-row w-full justify-center gap-4 mt-8 items-center">
 					{/* Donut */}
-					<div className="w-[30%] h-96">
+					<div className="w-full md:w-[30%] h-96">
 						<div className="w-auto h-full relative flex items-center justify-center">
 							<ResponsiveContainer width="100%" height="100%">
 								<PieChart className="w-full h-full">
@@ -52,7 +52,7 @@ const Tokenomics = () => {
 							{/* <div className="w-40 h-40 border-8 border-[#141622] absolute rounded-full top-0 left-0 right-0 bottom-0 m-auto -z-[1] "></div> */}
 						</div>
 					</div>
-					<div className="w-[30%] h-auto">
+					<div className="w-full md:w-[30%] h-auto">
 						{tokenomics?.map((token, index) => (
 							<div className="flex items-center justify-between mb-3">
 								<div className="flex items-center gap-2">

@@ -8,12 +8,12 @@ import { FaGem } from "react-icons/fa";
 
 const Header = () => {
 	return (
-		<header className="sticky top-0 left-0 bg-bg z-[3] w-full  py-4">
+		<header className="sticky top-0 left-0 bg-bg z-[3] w-full px-4 py-4">
 			<div className="w-full max-w-6xl mx-auto h-full flex items-center justify-between">
 				<div className="w-[120px] h-10 relative">
 					<Image alt="Logo" src={LogoImage} fill />
 				</div>
-				<nav className="flex items-center justify-between gap-8">
+				<nav className="hidden md:flex items-center justify-between gap-8">
 					<a href="#introduce" className="font-medium text-sm hover:text-white">
 						Introduce
 					</a>

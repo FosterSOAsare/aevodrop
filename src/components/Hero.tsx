@@ -36,12 +36,12 @@ const Hero = () => {
 		return number < 10 ? `0${number}` : number;
 	};
 	return (
-		<section className="mt-24 pb-24 border-b-[0.5px] border-opacity-20 border-desc hero-bg" id="introduce">
+		<section className="mt-12 md:mt-24 pb-12 md:pb-24 border-b-[0.5px] border-opacity-20 border-desc hero-bg px-4" id="introduce">
 			<div className="w-full max-w-4xl  flex items-center flex-col justify-center mx-auto">
 				<div className="w-[180px] h-16 mb-6 relative">
 					<Image alt="Logo" src={LogoImage} fill />
 				</div>
-				<p className="text-center w-[70%] leading-[30px]">
+				<p className="text-center w-full md:w-[70%] leading-[30px]">
 					Aevo is a decentralized derivatives exchange platform, focused on options and perpetual trading. The DEX runs on Aevo L2, an Ethereum roll-up based on the OP Stack. Aevo supports
 					options, perpetual futures, and many other products within a single margin account. Combining off-chain matching with on-chain settlement, the platform allows traders to have
 					unparalleled performance and latency while inheriting the security of Ethereum.
@@ -63,10 +63,10 @@ const Hero = () => {
 				</div>
 
 				<div className="w-full flex items-center justify-center  h-auto font-bold  mt-4">
-					<p className="text-[#ffac02] text-sm">Binance will list AEVO (AEVO) at 2024-03-13 10:00 (UTC)</p>
+					<p className="text-[#ffac02] text-sm text-center">Binance will list AEVO (AEVO) at 2024-03-13 10:00 (UTC)</p>
 				</div>
 
-				<article className="bg-[#191B28] max-w-3xl mt-16 h-auto w-full flex items-stretch justify-between gap-8">
+				<article className="bg-[#191B28] hidden  max-w-3xl mt-16 h-auto w-full md:flex items-stretch justify-between gap-8">
 					<div className="w-[30%] h-auto flex flex-col justify-center border-r-[0] z-[1] p-5 border-[2px] border-[#2c2f42] rounded-tl-[5px] rounded-bl-[5px] relative">
 						<p className="text-lg mb-6">Current Price</p>
 						<h3 className="font-bold">1 BNB = 25,000 AEVO</h3>
