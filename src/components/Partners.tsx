@@ -12,6 +12,7 @@ const Partners = () => {
 				<div className="w-full mt-16 grid grid-cols-4">
 					{partners?.map((partner, index) => (
 						<div
+							key={index}
 							className={`w-full p-8 h-auto ${index < 8 ? "border-b-[1px]" : ""} ${
 								index % 4 !== 0 ? "border-l-[1px]" : ""
 							} flex items-center justify-center border-slate-100 border-opacity-10`}>

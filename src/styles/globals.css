@@ -17,3 +17,10 @@ h3 {
 .gradient1 {
 	background: linear-gradient(-225deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
 }
+
+.layout-sphere {
+	background-image: url("../assets/layout-sphere.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+}
