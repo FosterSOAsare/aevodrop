@@ -47,14 +47,14 @@ const Hero = () => {
 					unparalleled performance and latency while inheriting the security of Ethereum.
 				</p>
 
-				<div className="flex items-center justify-between gap-8 mt-10">
-					<a href="#presale" className="flex bg-[#F9DA00] rounded-full relative hover:-top-2 transition-all duration-300 py-4 px-8 items-center justify-between gap-2">
+				<div className="w-full md:w-auto flex items-center justify-between gap-4 md:gap-8 mt-10">
+					<a href="#presale" className="flex bg-[#F9DA00] w-full md:w-auto rounded-full relative hover:-top-2 transition-all duration-300 py-4 px-8 items-center justify-between gap-2">
 						<span className="w-6 h-6 flex items-center justify-center">
 							<FaGem className="text-white text-xl" />
 						</span>
 						<p className="text-black text-sm font-bold">Pre-Sale</p>
 					</a>
-					<a href="#airdrop" className="flex bg-blue relative rounded-full hover:-top-2 transition-all duration-300 py-4 px-8 items-center justify-between gap-2">
+					<a href="#airdrop" className="flex bg-blue relative w-full md:w-auto rounded-full hover:-top-2 transition-all duration-300 py-4 px-8 items-center justify-between gap-2">
 						<span className="w-6 h-6 flex items-center justify-center">
 							<FaParachuteBox className="text-white text-xl" />
 						</span>

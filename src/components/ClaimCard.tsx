@@ -12,7 +12,7 @@ const ClaimCard = ({ name, list, index, image }: IClaimCard) => {
 		<div
 			className={`md:border-desc md:border-opacity-50 ${index % 2 === 1 ? "md:border-l-[1px] " : " "} ${
 				index < 2 ? "md:border-b-[1px]" : ""
-			} flex flex-col md:flex-row items-center md:items-start justify-start p-6 py-12 gap-8`}>
+			} flex flex-col md:flex-row items-center md:items-start justify-start p-6 md:py-12 py-6 gap-8`}>
 			<div className="w-14 h-12 relative fill">
 				<Image src={image} alt={name} fill />
 			</div>
