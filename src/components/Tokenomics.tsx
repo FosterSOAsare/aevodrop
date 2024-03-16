@@ -54,7 +54,7 @@ const Tokenomics = () => {
 					</div>
 					<div className="w-full md:w-[40%] lg:w-[30%] h-auto">
 						{tokenomics?.map((token, index) => (
-							<div className="flex items-center justify-between mb-3">
+							<div className="flex items-center justify-between mb-3" key={index}>
 								<div className="flex items-center gap-2">
 									<span className="block w-4 h-4 rounded-full" style={{ backgroundColor: token?.color }}></span>
 									<p className="font-medium">{token?.name}</p>
