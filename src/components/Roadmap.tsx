@@ -9,7 +9,7 @@ const Roadmap = () => {
 	const [mobileSlider, setMobileSlider] = useState(1);
 	return (
 		<section className="w-full py-16 md:py-24" id="roadmap">
-			<h3 className="text-3xl text-center">Project Roadmap</h3>
+			<h3 className="text-3xl font-medium mb-6 text-center">Project Roadmap</h3>
 			<div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
 				<aside className="md:w-1/5">
 					<h3 className="font-bold text-2xl mt-6 md:mt-0 md:text-3xl lg:text-6xl md:-rotate-90"> 2024</h3>
@@ -45,7 +45,7 @@ const Roadmap = () => {
 						</div>
 					</div>
 					{/* For mobile */}
-					<div className="w-[100vw] overflow-hidden relative mt-8">
+					<div className="md:hidden w-[100vw] overflow-hidden relative mt-8">
 						<div
 							className={`relative transition-all duration-700 flex items-stretch justify-between`}
 							style={{ width: `${roadmap?.length * 100}%`, marginLeft: `-${(mobileSlider - 1) * 100}%` }}>
@@ -66,9 +66,9 @@ const Roadmap = () => {
 					</div>
 				</div>
 				{/* For desktop */}
-				<div className="hidden md:block w-1/5">
+				<div className="hidden md:block">
 					<button
-						className={`w-12 h-12 border-[1px] border-blue text-blue  ${active === 2 ? "opacity-100 " : "opacity-20"} flex items-center justify-center mb-2 rounded-full`}
+						className={`w-12 h-12 border-[1px] border-blue text-blue  ${active === 2 ? "opacity-100 " : "opacity-20"} flex items-center justify-center mb-3 rounded-full`}
 						onClick={() => setActive(1)}>
 						<MdOutlineKeyboardArrowUp className={`text-3xl`} />
 					</button>
