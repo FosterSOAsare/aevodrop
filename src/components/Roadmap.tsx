@@ -8,7 +8,7 @@ const Roadmap = () => {
 	const [active, setActive] = useState(1);
 	const [mobileSlider, setMobileSlider] = useState(1);
 	return (
-		<section className="w-full py-24" id="roadmap">
+		<section className="w-full py-16 md:py-24" id="roadmap">
 			<h3 className="text-3xl text-center">Project Roadmap</h3>
 			<div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
 				<aside className="md:w-1/5">
@@ -53,7 +53,7 @@ const Roadmap = () => {
 								<div className="w-full p-4" key={index}>
 									<h3 className="opacity-50 font-medium mb-2">{item?.time}</h3>
 									<h1 className="text-2xl text-white font-bold mb-6">Phase {index + 1}</h1>
-									<ul className="list-disc w-[90%] ml-5 pb-10">
+									<ul className="list-disc w-[90%] ml-5">
 										{item?.features?.map((feature, index) => (
 											<li className="w-full text-[18px] mb-[5px]" key={index}>
 												{feature}
