@@ -8,6 +8,7 @@ import Tokenomics from "@/components/Tokenomics";
 import Partners from "@/components/Partners";
 
 import WorksImage from "@/assets/works.jpg";
+import Roadmap from "@/components/Roadmap";
 
 export default function Home() {
 	return (
@@ -41,6 +42,7 @@ export default function Home() {
 			<Presale />
 
 			<Tokenomics />
+			<Roadmap />
 			<Partners />
 		</main>
 	);
