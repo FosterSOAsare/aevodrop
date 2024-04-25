@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import PresaleCard from "./PresaleCard";
 
 const Presale = () => {
+	const [isCopied, setIsCopied] = useState(false);
+
+	const copyText = () => {
+		navigator.clipboard.writeText("0xFEe2a278c7c483Ff7c4241f79a7B14F5FE4E3c5e");
+		setIsCopied(true);
+		setTimeout(() => {
+			setIsCopied(false);
+		}, 2000);
+	};
 	return (
 		<section className="py-12 md:py-24 px-4" id="presale">
 			<div className="w-full max-w-4xl mx-auto  flex items-center justify-center flex-col">
@@ -10,7 +19,9 @@ const Presale = () => {
 				<div className="w-full md:w-1/2 rounded-[5px] bg-[#1A1B26] p-6 flex flex-col items-center justify-center">
 					<p className="text-white mb-3">Pre-Sale Address</p>
 					<p className="text-blue text-sm md:text-[16px] mb-2 font-medium">0xFEe2a278c7c483Ff7c4241f79a7B14F5FE4E3c5e</p>
-					<button className="px-4 py-2 text-[15px] hover:opacity-70 rounded-full bg-blue mt-4 text-white font-medium">Copy Address</button>
+					<button className={`px-4 py-2 text-[15px] hover:opacity-70 rounded-full ${isCopied ? " bg-green-500" : "bg-blue"} mt-4 text-white font-medium`} onClick={copyText}>
+						{isCopied ? "Copied" : "Copy Address"}
+					</button>
 				</div>
 
 				<ul className="mt-5 w-full md:auto pl-5 md:pl-0 flex items-center list-disc flex-col">

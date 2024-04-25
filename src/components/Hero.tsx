@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 
 import LogoImage from "@/assets/logo.png";
@@ -13,17 +13,21 @@ const Hero = () => {
 			const now = new Date().getTime();
 			const difference = (targetDate - now) / 1000;
 
-			// Calculate days, hours, minutes, and seconds
-			const days = Math.floor(difference / (3600 * 24));
-			const hours = Math.floor((difference % (3600 * 24)) / 3600);
-			const minutes = Math.floor((difference % 3600) / 60);
-			const seconds = Math.floor(difference % 60);
+			if (difference > 0) {
+				// Calculate days, hours, minutes, and seconds
+				const days = Math.floor(difference / (3600 * 24));
+				const hours = Math.floor((difference % (3600 * 24)) / 3600);
+				const minutes = Math.floor((difference % 3600) / 60);
+				const seconds = Math.floor(difference % 60);
 
-			// Display the countdown
-			setTime({ hours, minutes, days, seconds });
-			// Stop the timer when difference reaches 0
-			if (difference <= 0) {
-				clearInterval(timer);
+				// Display the countdown
+				setTime({ hours, minutes, days, seconds });
+				// Stop the timer when difference reaches 0
+				if (difference <= 0) {
+					clearInterval(timer);
+				}
+			} else {
+				setTime({ hours: 0, minutes: 0, seconds: 0, days: 0 });
 			}
 		}, 1000);
 
@@ -31,6 +35,10 @@ const Hero = () => {
 			clearInterval(timer);
 		};
 	});
+
+	const countCompleted = useMemo(() => {
+		return timeLeft.days == 0 && timeLeft.hours == 0 && timeLeft.minutes == 0 && timeLeft.seconds == 0;
+	}, [timeLeft]);
 
 	const padNumber = (number: number) => {
 		return number < 10 ? `0${number}` : number;
@@ -90,8 +98,8 @@ const Hero = () => {
 								<p className="text-[15px] ml-[4px]">Minutes</p>
 							</div>
 							<div>
-								<p className="text-4xl font-bold text-blue">{padNumber(timeLeft?.seconds)}</p>
-								<p className="text-[15px] ml-[4px] text-blue">Seconds</p>
+								<p className={`text-4xl font-bold ${countCompleted ? "text-white" : "text-blue"}`}>{padNumber(timeLeft?.seconds)}</p>
+								<p className={`text-[15px] ml-[4px] ${countCompleted ? "text-white" : "text-blue"}`}>Seconds</p>
 							</div>
 						</div>
 					</div>

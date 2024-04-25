@@ -17,9 +17,11 @@ const Tokenomics = () => {
 						<div className="w-auto h-full relative flex items-center justify-center">
 							<ResponsiveContainer width="100%" height="100%">
 								<PieChart className="w-full h-full">
+									{/* cornerRadius for adding rounded to cells */}
 									<Pie data={tokenomics} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={100} outerRadius={130} strokeWidth={0} labelLine={false}>
+										{/* StrokeWidth and stroke for gap */}
 										{tokenomics.map((entry, index) => (
-											<Cell key={`cell-${index}`} fill={entry?.color} />
+											<Cell key={`cell-${index}`} fill={entry?.color} stroke="#191B28" className="pie-chart-cell" />
 										))}
 
 										<Label value={`Total Token Supply`} fontSize="16px" fontWeight={700} style={{ lineHeight: 2 }} fill="#5B7FEC" dy={-30} position="center" />
